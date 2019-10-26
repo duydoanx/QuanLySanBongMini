@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLySanBongMini
 {
-    public partial class Form1 : Form
+    public partial class fMain : Form
     {
-        public Form1()
+        public fMain()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

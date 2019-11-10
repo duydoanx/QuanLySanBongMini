@@ -13,3 +13,4 @@ create table UserLogin(
 select * from UserLogin where username = 'duydoan' and password = '1230456';
 
 drop table UserLogin;
+select * from UserLogin; 

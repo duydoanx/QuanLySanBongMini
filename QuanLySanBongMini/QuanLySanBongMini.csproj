@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -49,9 +64,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\NganhHangBUS.cs" />
+    <Compile Include="BUS\SanBongBUS.cs" />
     <Compile Include="BUS\UserBUS.cs" />
+    <Compile Include="DAO\NganhHangDAO.cs" />
+    <Compile Include="DAO\SanBongDAO.cs" />
     <Compile Include="DAO\SQLConnection.cs" />
     <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="DTO\NganhHang.cs" />
+    <Compile Include="DTO\SanBong.cs" />
     <Compile Include="DTO\User.cs" />
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
@@ -65,10 +86,22 @@
     <Compile Include="fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="fNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNhapHang.Designer.cs">
+      <DependentUpon>fNhapHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMain.resx">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNhapHang.resx">
+      <DependentUpon>fNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,8 +140,35 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_football2.ico" />
+    <None Include="Resources\plus_2_math_34px3.png" />
+    <None Include="Resources\pencil_tip_34px1.png" />
+    <None Include="Resources\pencil_tip_34px.png" />
+    <None Include="Resources\refresh_16px.png" />
+    <None Include="Resources\refresh_34px.png" />
+    <None Include="Resources\delete_sign_34px.png" />
+    <None Include="Resources\delete_2_34px.png" />
+    <None Include="Resources\plus_2_math_34px2.png" />
+    <None Include="Resources\plus_math_34px.png" />
+    <None Include="Resources\add_34px.png" />
+    <Content Include="Resources\attention_64px.png" />
+    <None Include="Resources\plus_2_math_34px1.png" />
+    <None Include="Resources\plus_2_math_34px.png" />
+    <None Include="Resources\password_64px.png" />
+    <None Include="Resources\delete_sign_64px.png" />
     <None Include="Resources\forward_64px.png" />
     <None Include="Resources\import_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,44 +12,41 @@ namespace DAO
         //Lay thong tin doi tuong user tu database
         public static User getUser(String userName, String passWord)
         {
+            User user = null;
             //khoi tao ket noi database
-            SQLConnection connection = new SQLConnection();
-            SqlConnection conn = connection.openConnect();
-            String query = "select * from UserLogin where username = @username and password = @password";
-            SqlCommand command = new SqlCommand(query, conn);
 
-            //tao cac parameter
-            command.Parameters.Add("@username", System.Data.SqlDbType.NVarChar, 50);
-            command.Parameters.Add("@password", System.Data.SqlDbType.NVarChar, 50);
-
-            // truyen vao cac parameter
-            command.Parameters["@username"].Value = userName;
-            command.Parameters["@password"].Value = passWord;
-
-            try
+            using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
             {
-                SqlDataReader dataReader = command.ExecuteReader();
-                if (dataReader.Read())
+                conn.Open();
+                String query = "select * from UserLogin where username = @username and password = @password";
+                SqlCommand command = new SqlCommand(query, conn);
+
+                //tao cac parameter
+                command.Parameters.AddWithValue("@username", userName);
+                command.Parameters.AddWithValue("@password", passWord);
+
+                try
                 {
-                    int id = (int)dataReader["userID"];
-                    String username = (String)dataReader["username"];
-                    String password = (String)dataReader["password"];
-                    bool isAdmin = (bool)dataReader["isAdmin"];
-                    DateTime dateCreate = (DateTime)dataReader["dateCreate"];
-                    User user = new User(id, username, password, isAdmin);
-                    conn.Close();
-                    return user;
+                    SqlDataReader dataReader = command.ExecuteReader();
+                    if (dataReader.Read())
+                    {
+
+                        String username = (String)dataReader["username"];
+                        String password = (String)dataReader["password"];
+                        bool isAdmin = (bool)dataReader["isAdmin"];
+                        DateTime dateCreate = (DateTime)dataReader["dateCreate"];
+                        user = new User(username, password, isAdmin);
+                        conn.Close();
+
+                    }
                 }
-                else
+                catch (SqlException se)
                 {
-                    return null;
+                    throw se;
                 }
+                conn.Close();
             }
-            catch (SqlException se)
-            {
-                throw se;
-            }
-            
+            return user;
         }
     }
 }

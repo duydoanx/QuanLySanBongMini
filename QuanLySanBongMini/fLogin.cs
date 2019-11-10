@@ -31,11 +31,15 @@ namespace QuanLySanBongMini
             //User user = UserDAO.getUser(username, password);
             if (UserBUS.isExist(username, password))
             {
-                MessageBox.Show("thanh cong");
+                User user = UserBUS.getUser(username, password);
+                fMain formMain = new fMain(user.isAdmin);
+                this.Hide();
+                formMain.ShowDialog();
+                this.Show();
             }
             else
             {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!");
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -54,7 +58,14 @@ namespace QuanLySanBongMini
 
         private void fLogin_Load(object sender, EventArgs e)
         {
-
+            
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        
     }
 }

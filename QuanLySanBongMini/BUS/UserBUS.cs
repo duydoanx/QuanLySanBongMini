@@ -22,7 +22,7 @@ namespace BUS
                     return false;
                 }
             }
-            catch (SqlException se)
+            catch (SqlException e)
             {
                 return false;
             }

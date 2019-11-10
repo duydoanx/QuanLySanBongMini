@@ -16,8 +16,10 @@ namespace DAO.Tests
         public void getUserTest()
         {
             User user = UserDAO.getUser("duydoan", "1230456");
-            User user1 = new User(1, "duydoan", "1230456", true);
+            User user1 = new User("duydoan", "1230456", true);
             Assert.AreEqual(user1.toString(), user.toString());
+
+
         }
     }
 }

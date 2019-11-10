@@ -121,16 +121,58 @@
   <data name="login_rounded_right_64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_rounded_right_64px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="delete_2_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_2_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="password_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\password_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pencil_tip_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pencil_tip_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus_2_math_34px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus_2_math_34px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pencil_tip_34px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pencil_tip_34px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_sign_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_sign_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="login_rounded_right_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_rounded_right_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="import_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\import_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login_rounded_right_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_rounded_right_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="forward_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\forward_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="import_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\import_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus_2_math_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus_2_math_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus_2_math_34px2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus_2_math_34px2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus_math_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus_math_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_sign_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_sign_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus_2_math_34px3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus_2_math_34px3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

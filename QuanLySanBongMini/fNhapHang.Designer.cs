@@ -28,54 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("asdfasd");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("asdfasdf");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("asdfasd");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("asdfasdfsdafasdfasdfasdf");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fNhapHang));
-            this.btThemNganhHang = new System.Windows.Forms.Button();
-            this.btXoaNganhHang = new System.Windows.Forms.Button();
-            this.btSuaNganhHang = new System.Windows.Forms.Button();
             this.tbtenNganhHang = new System.Windows.Forms.TextBox();
             this.lvNganhHang = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btSuaNganhHang = new System.Windows.Forms.Button();
+            this.btXoaNganhHang = new System.Windows.Forms.Button();
+            this.btThemNganhHang = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btThemNganhHang
-            // 
-            this.btThemNganhHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThemNganhHang.Image = global::QuanLySanBongMini.Properties.Resources.plus_2_math_34px3;
-            this.btThemNganhHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThemNganhHang.Location = new System.Drawing.Point(212, 12);
-            this.btThemNganhHang.Name = "btThemNganhHang";
-            this.btThemNganhHang.Size = new System.Drawing.Size(80, 39);
-            this.btThemNganhHang.TabIndex = 1;
-            this.btThemNganhHang.Text = "Thêm";
-            this.btThemNganhHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btThemNganhHang.UseVisualStyleBackColor = true;
-            this.btThemNganhHang.Click += new System.EventHandler(this.btThemNganhHang_Click);
-            // 
-            // btXoaNganhHang
-            // 
-            this.btXoaNganhHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoaNganhHang.Image = global::QuanLySanBongMini.Properties.Resources.delete_sign_34px;
-            this.btXoaNganhHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoaNganhHang.Location = new System.Drawing.Point(212, 102);
-            this.btXoaNganhHang.Name = "btXoaNganhHang";
-            this.btXoaNganhHang.Size = new System.Drawing.Size(80, 39);
-            this.btXoaNganhHang.TabIndex = 2;
-            this.btXoaNganhHang.Text = "Xóa";
-            this.btXoaNganhHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btXoaNganhHang.UseVisualStyleBackColor = true;
-            // 
-            // btSuaNganhHang
-            // 
-            this.btSuaNganhHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSuaNganhHang.Image = global::QuanLySanBongMini.Properties.Resources.pencil_tip_34px1;
-            this.btSuaNganhHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSuaNganhHang.Location = new System.Drawing.Point(212, 57);
-            this.btSuaNganhHang.Name = "btSuaNganhHang";
-            this.btSuaNganhHang.Size = new System.Drawing.Size(80, 39);
-            this.btSuaNganhHang.TabIndex = 3;
-            this.btSuaNganhHang.Text = "Sửa";
-            this.btSuaNganhHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btSuaNganhHang.UseVisualStyleBackColor = true;
             // 
             // tbtenNganhHang
             // 
@@ -86,22 +50,73 @@
             // 
             // lvNganhHang
             // 
+            this.lvNganhHang.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvNganhHang.HideSelection = false;
+            this.lvNganhHang.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4});
             this.lvNganhHang.Location = new System.Drawing.Point(12, 39);
+            this.lvNganhHang.MultiSelect = false;
             this.lvNganhHang.Name = "lvNganhHang";
             this.lvNganhHang.Size = new System.Drawing.Size(193, 243);
             this.lvNganhHang.TabIndex = 0;
             this.lvNganhHang.UseCompatibleStateImageBehavior = false;
+            this.lvNganhHang.View = System.Windows.Forms.View.Tile;
+            this.lvNganhHang.SelectedIndexChanged += new System.EventHandler(this.lvNganhHang_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(13, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(28, 14);
             this.label1.TabIndex = 5;
             this.label1.Text = "Tên";
+            // 
+            // btSuaNganhHang
+            // 
+            this.btSuaNganhHang.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSuaNganhHang.Image = global::QuanLySanBongMini.Properties.Resources.pencil_tip_34px1;
+            this.btSuaNganhHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSuaNganhHang.Location = new System.Drawing.Point(212, 57);
+            this.btSuaNganhHang.Name = "btSuaNganhHang";
+            this.btSuaNganhHang.Size = new System.Drawing.Size(80, 39);
+            this.btSuaNganhHang.TabIndex = 3;
+            this.btSuaNganhHang.Text = "Sửa";
+            this.btSuaNganhHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btSuaNganhHang.UseVisualStyleBackColor = true;
+            this.btSuaNganhHang.Click += new System.EventHandler(this.btSuaNganhHang_Click);
+            // 
+            // btXoaNganhHang
+            // 
+            this.btXoaNganhHang.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXoaNganhHang.Image = global::QuanLySanBongMini.Properties.Resources.delete_sign_30px;
+            this.btXoaNganhHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btXoaNganhHang.Location = new System.Drawing.Point(212, 102);
+            this.btXoaNganhHang.Name = "btXoaNganhHang";
+            this.btXoaNganhHang.Size = new System.Drawing.Size(80, 39);
+            this.btXoaNganhHang.TabIndex = 2;
+            this.btXoaNganhHang.Text = "Xóa";
+            this.btXoaNganhHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btXoaNganhHang.UseVisualStyleBackColor = true;
+            this.btXoaNganhHang.Click += new System.EventHandler(this.btXoaNganhHang_Click);
+            // 
+            // btThemNganhHang
+            // 
+            this.btThemNganhHang.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThemNganhHang.Image = global::QuanLySanBongMini.Properties.Resources.plus_30px;
+            this.btThemNganhHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThemNganhHang.Location = new System.Drawing.Point(212, 12);
+            this.btThemNganhHang.Name = "btThemNganhHang";
+            this.btThemNganhHang.Size = new System.Drawing.Size(80, 39);
+            this.btThemNganhHang.TabIndex = 1;
+            this.btThemNganhHang.Text = "Thêm";
+            this.btThemNganhHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btThemNganhHang.UseVisualStyleBackColor = true;
+            this.btThemNganhHang.Click += new System.EventHandler(this.btThemNganhHang_Click);
             // 
             // fNhapHang
             // 

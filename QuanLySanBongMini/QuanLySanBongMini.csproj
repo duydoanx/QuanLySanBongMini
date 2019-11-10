@@ -140,6 +140,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_football2.ico" />
+    <None Include="Resources\delete_sign_30px.png" />
+    <None Include="Resources\delete_sign_25px.png" />
+    <None Include="Resources\plus_25px.png" />
+    <None Include="Resources\plus_27px.png" />
+    <None Include="Resources\plus_28px.png" />
+    <None Include="Resources\plus_30px.png" />
+    <None Include="Resources\plus_34px.png" />
     <None Include="Resources\plus_2_math_34px3.png" />
     <None Include="Resources\pencil_tip_34px1.png" />
     <None Include="Resources\pencil_tip_34px.png" />

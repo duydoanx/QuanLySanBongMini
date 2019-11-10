@@ -83,6 +83,26 @@ namespace QuanLySanBongMini.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_sign_25px {
+            get {
+                object obj = ResourceManager.GetObject("delete_sign_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_sign_30px {
+            get {
+                object obj = ResourceManager.GetObject("delete_sign_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_sign_34px {
             get {
                 object obj = ResourceManager.GetObject("delete_sign_34px", resourceCulture);
@@ -216,6 +236,56 @@ namespace QuanLySanBongMini.Properties {
         internal static System.Drawing.Bitmap plus_2_math_34px3 {
             get {
                 object obj = ResourceManager.GetObject("plus_2_math_34px3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_25px {
+            get {
+                object obj = ResourceManager.GetObject("plus_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_27px {
+            get {
+                object obj = ResourceManager.GetObject("plus_27px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_28px {
+            get {
+                object obj = ResourceManager.GetObject("plus_28px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_30px {
+            get {
+                object obj = ResourceManager.GetObject("plus_30px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_34px {
+            get {
+                object obj = ResourceManager.GetObject("plus_34px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

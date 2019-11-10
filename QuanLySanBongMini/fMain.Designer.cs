@@ -455,7 +455,7 @@
             // 
             this.btXoaSan.BackColor = System.Drawing.Color.Transparent;
             this.btXoaSan.Enabled = false;
-            this.btXoaSan.Image = global::QuanLySanBongMini.Properties.Resources.delete_sign_34px;
+            this.btXoaSan.Image = global::QuanLySanBongMini.Properties.Resources.delete_sign_25px;
             this.btXoaSan.Location = new System.Drawing.Point(174, 42);
             this.btXoaSan.Name = "btXoaSan";
             this.btXoaSan.Size = new System.Drawing.Size(34, 34);
@@ -467,7 +467,7 @@
             // btThemSan
             // 
             this.btThemSan.BackColor = System.Drawing.Color.Transparent;
-            this.btThemSan.Image = global::QuanLySanBongMini.Properties.Resources.plus_2_math_34px2;
+            this.btThemSan.Image = global::QuanLySanBongMini.Properties.Resources.plus_25px;
             this.btThemSan.Location = new System.Drawing.Point(94, 42);
             this.btThemSan.Name = "btThemSan";
             this.btThemSan.Size = new System.Drawing.Size(34, 34);
@@ -479,19 +479,19 @@
             // btThemNganhHang
             // 
             this.btThemNganhHang.BackColor = System.Drawing.Color.Transparent;
-            this.btThemNganhHang.Image = global::QuanLySanBongMini.Properties.Resources.plus_2_math_34px2;
+            this.btThemNganhHang.Image = global::QuanLySanBongMini.Properties.Resources.plus_25px;
             this.btThemNganhHang.Location = new System.Drawing.Point(152, 3);
             this.btThemNganhHang.Name = "btThemNganhHang";
             this.btThemNganhHang.Size = new System.Drawing.Size(34, 34);
             this.btThemNganhHang.TabIndex = 9;
-            this.toolTip1.SetToolTip(this.btThemNganhHang, "Thêm hàng");
+            this.toolTip1.SetToolTip(this.btThemNganhHang, "Quản lý ngành hàng");
             this.btThemNganhHang.UseVisualStyleBackColor = false;
             this.btThemNganhHang.Click += new System.EventHandler(this.btThemNganhHang_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Image = global::QuanLySanBongMini.Properties.Resources.plus_2_math_34px2;
+            this.button3.Image = global::QuanLySanBongMini.Properties.Resources.plus_25px;
             this.button3.Location = new System.Drawing.Point(72, 68);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(34, 34);
@@ -502,7 +502,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Image = global::QuanLySanBongMini.Properties.Resources.delete_sign_34px;
+            this.button2.Image = global::QuanLySanBongMini.Properties.Resources.delete_sign_25px;
             this.button2.Location = new System.Drawing.Point(152, 68);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(34, 34);

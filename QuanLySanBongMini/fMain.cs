@@ -46,7 +46,7 @@ namespace QuanLySanBongMini
             }
             else
             {
-                MessageBox.Show("Không thể thêm sân, vui lòng đổi tên", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Không thể thêm sân, vui lòng nhập tên", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 statusBarAddText("Lỗi khi thêm sân!");
             }
         }
@@ -69,9 +69,7 @@ namespace QuanLySanBongMini
         private void fMain_Load(object sender, EventArgs e)
         {
             lvSanBong.Sorting = SortOrder.None;
-            updateListView();
-            btSuaSan.Enabled = false;
-            btXoaSan.Enabled = false;
+            updateListView();            
         }        
 
         private void tbTenSan_KeyPress(object sender, KeyPressEventArgs e)

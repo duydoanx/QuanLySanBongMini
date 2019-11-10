@@ -67,6 +67,7 @@ namespace QuanLySanBongMini.BUS
             }
             return kt;
         }
+
         public static bool updateTenSan(int id, String tenSan)
         {
             bool kt = true;

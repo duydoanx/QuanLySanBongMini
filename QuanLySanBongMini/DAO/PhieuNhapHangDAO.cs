@@ -1,28 +1,30 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using QuanLySanBongMini.DTO;
 
 namespace QuanLySanBongMini.DAO
 {
-    public class SanBongDAO
+    public class PhieuNhapHangDAO
     {
-        public static void addSan(String ten)
+        public static void addPhieuNhapHang(int idMatHang, DateTime ngayNhap, int soLuong, float tongTien)
         {
             using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
             {
                 conn.Open();
 
-                String query = "insert into SanBong(tenSan) values(@tenSan);";
+                String query = "insert into PhieuNhapHang(idMatHang, ngayNhap, soLuong, tongTien) values (@idMatHang, @ngayNhap, @soLuong, @tongTien);";
 
                 SqlCommand command = new SqlCommand(query, conn);
 
-                command.Parameters.AddWithValue("@tenSan", ten);
+                command.Parameters.AddWithValue("@idMatHang", idMatHang);
+                command.Parameters.AddWithValue("@ngayNhap", ngayNhap);
+                command.Parameters.AddWithValue("@soLuong", soLuong);
+                command.Parameters.AddWithValue("@tongTien", tongTien);
+
 
                 try
                 {
@@ -38,8 +40,8 @@ namespace QuanLySanBongMini.DAO
 
         }
 
-        public static DataSet getAllSan()
-        {            
+        public static DataSet getAllPhieuNhapHang()
+        {
             DataSet dataSet;
             try
             {
@@ -47,38 +49,13 @@ namespace QuanLySanBongMini.DAO
                 {
                     conn.Open();
 
-                    String query = "select * from SanBong";
+                    String query = "select * from PhieuNhapHang";
 
                     SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, conn);
 
                     dataSet = new DataSet();
-                    
+
                     sqlDataAdapter.Fill(dataSet);
-
-                    conn.Close();
-                }
-            }
-            catch(SqlException e)
-            {
-                throw e;
-            }
-            return dataSet;
-        }
-
-        public static void deleteSan(string tenSan)
-        {
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
-                {
-                    conn.Open();
-
-                    String query = "delete from SanBong where tenSan = @tenSan";
-                    SqlCommand command = new SqlCommand(query, conn);
-
-                    command.Parameters.AddWithValue("@tenSan", tenSan);
-
-                    command.ExecuteNonQuery();
 
                     conn.Close();
                 }
@@ -87,9 +64,10 @@ namespace QuanLySanBongMini.DAO
             {
                 throw e;
             }
-        } 
+            return dataSet;
+        }
 
-        public static void updateTenSan(int id, String tenSan)
+        public static void deletePhieuNhapHang(int id)
         {
             try
             {
@@ -97,10 +75,9 @@ namespace QuanLySanBongMini.DAO
                 {
                     conn.Open();
 
-                    String query = "update SanBong set tenSan = @tenSan where id = @id";
+                    String query = "delete from PhieuNhapHang where id = @id";
                     SqlCommand command = new SqlCommand(query, conn);
 
-                    command.Parameters.AddWithValue("@tenSan", tenSan);
                     command.Parameters.AddWithValue("@id", id);
 
                     command.ExecuteNonQuery();
@@ -112,7 +89,6 @@ namespace QuanLySanBongMini.DAO
             {
                 throw e;
             }
-
         }
     }
 }

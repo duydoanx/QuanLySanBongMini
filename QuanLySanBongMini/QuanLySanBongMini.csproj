@@ -64,13 +64,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\MatHangBUS.cs" />
     <Compile Include="BUS\NganhHangBUS.cs" />
+    <Compile Include="BUS\PhieuNhapHangBUS.cs" />
     <Compile Include="BUS\SanBongBUS.cs" />
     <Compile Include="BUS\UserBUS.cs" />
+    <Compile Include="DAO\MatHangDAO.cs" />
     <Compile Include="DAO\NganhHangDAO.cs" />
+    <Compile Include="DTO\PhieuNhapHang.cs" />
+    <Compile Include="DAO\PhieuNhapHangDAO.cs" />
     <Compile Include="DAO\SanBongDAO.cs" />
     <Compile Include="DAO\SQLConnection.cs" />
     <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="DTO\MatHang.cs" />
     <Compile Include="DTO\NganhHang.cs" />
     <Compile Include="DTO\SanBong.cs" />
     <Compile Include="DTO\User.cs" />
@@ -86,22 +92,37 @@
     <Compile Include="fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="fNhapHang.cs">
+    <Compile Include="fNhapMatHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fNhapHang.Designer.cs">
-      <DependentUpon>fNhapHang.cs</DependentUpon>
+    <Compile Include="fNhapMatHang.Designer.cs">
+      <DependentUpon>fNhapMatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQuanLyNganhHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLyNganhHang.Designer.cs">
+      <DependentUpon>fQuanLyNganhHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecondaryForm\fNhapGiaMatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecondaryForm\fNhapGiaMatHang.Designer.cs">
+      <DependentUpon>fNhapGiaMatHang.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fNhapHang.resx">
-      <DependentUpon>fNhapHang.cs</DependentUpon>
+    <EmbeddedResource Include="fNhapMatHang.resx">
+      <DependentUpon>fNhapMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLyNganhHang.resx">
+      <DependentUpon>fQuanLyNganhHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -113,6 +134,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SecondaryForm\fNhapGiaMatHang.resx">
+      <DependentUpon>fNhapGiaMatHang.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

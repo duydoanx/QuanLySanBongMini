@@ -1,6 +1,6 @@
 ﻿namespace QuanLySanBongMini.SecondaryForm
 {
-    partial class fNhapGiaMatHang
+    partial class FNhapGiaMatHang
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fNhapGiaMatHang));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FNhapGiaMatHang));
             this.label1 = new System.Windows.Forms.Label();
             this.btOK = new System.Windows.Forms.Button();
             this.tbDonGia = new System.Windows.Forms.NumericUpDown();

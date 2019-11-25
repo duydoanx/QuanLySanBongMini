@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 
 namespace QuanLySanBongMini.DTO
 {
-    class SanBong
+    class SanBong : DAO.SanBongDAO
     {
-        public int id { get;}
+        public int id { get; }
         public string tenSan { get; set; }
+        public bool dangThue { get; set; }
 
-        public SanBong(int id, string tenSan)
+        public SanBong(int id, string tenSan, bool dangThue)
         {
             this.tenSan = tenSan;
             this.id = id;
+            this.dangThue = dangThue;
         }
     }
 }

@@ -13,10 +13,10 @@ using System.Windows.Forms;
 
 namespace QuanLySanBongMini
 {
-    public partial class fQuanLyNganhHang : Form
+    public partial class FQuanLyNganhHang : Form
     {
         private ArrayList nganhHangList = new ArrayList();
-        public fQuanLyNganhHang()
+        public FQuanLyNganhHang()
         {
             InitializeComponent();
         }

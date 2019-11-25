@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace QuanLySanBongMini.SecondaryForm
 {
-    public partial class fNhapGiaMatHang : Form
+    public partial class FNhapGiaMatHang : Form
     {
         public float donGia { get; set; }
-        public fNhapGiaMatHang()
+        public FNhapGiaMatHang()
         {
             InitializeComponent();
             

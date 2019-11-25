@@ -118,82 +118,91 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="login_rounded_right_64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login_rounded_right_64px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete_2_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_2_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plus_2_math_34px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plus_2_math_34px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pencil_tip_34px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pencil_tip_34px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="refresh_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cheap_2_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cheap_2_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pencil_tip_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pencil_tip_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="refresh_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plus_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plus_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete_sign_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_sign_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plus_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plus_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="password_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\password_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="login_rounded_right_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login_rounded_right_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="login_rounded_right_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login_rounded_right_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="plus_27px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus_27px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="import_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\import_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plus_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plus_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plus_2_math_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus_2_math_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="plus_2_math_34px3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plus_2_math_34px3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="plus_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete_sign_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_sign_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="plus_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pencil_tip_34px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pencil_tip_34px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_2_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_2_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login_rounded_right_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_rounded_right_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login_rounded_right_64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_rounded_right_64px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_sign_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_sign_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="forward_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\forward_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="plus_2_math_34px3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus_2_math_34px3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plus_2_math_34px2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus_2_math_34px2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="password_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\password_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="import_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\import_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="plus_28px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus_28px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="plus_math_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plus_math_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete_sign_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_sign_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_sign_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_sign_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete_sign_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_sign_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete_sign_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_sign_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="refresh_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus_math_34px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus_math_34px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login_rounded_right_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_rounded_right_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="statistic_document_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\statistic_document_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus_2_math_34px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus_2_math_34px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="update_left_rotation_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\update_left_rotation_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -1,6 +1,6 @@
 ﻿namespace QuanLySanBongMini
 {
-    partial class fQuanLyNganhHang
+    partial class FQuanLyNganhHang
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("asdfasdf");
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("asdfasd");
             System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("asdfasdfsdafasdfasdfasdf");
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fQuanLyNganhHang));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FQuanLyNganhHang));
             this.tbtenNganhHang = new System.Windows.Forms.TextBox();
             this.lvNganhHang = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();

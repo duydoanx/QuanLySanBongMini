@@ -142,7 +142,7 @@ namespace QuanLySanBongMini
 
                 if(dialogResult == DialogResult.Yes)
                 {
-                    SecondaryForm.fNhapGiaMatHang formDonGia = new SecondaryForm.fNhapGiaMatHang();
+                    SecondaryForm.FNhapGiaMatHang formDonGia = new SecondaryForm.FNhapGiaMatHang();
                     DialogResult isOk = formDonGia.ShowDialog();
 
                     if (isOk == DialogResult.OK)

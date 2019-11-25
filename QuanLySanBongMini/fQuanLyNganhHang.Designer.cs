@@ -1,6 +1,6 @@
 ﻿namespace QuanLySanBongMini
 {
-    partial class fNhapHang
+    partial class FQuanLyNganhHang
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("asdfasdf");
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("asdfasd");
             System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("asdfasdfsdafasdfasdfasdf");
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fNhapHang));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FQuanLyNganhHang));
             this.tbtenNganhHang = new System.Windows.Forms.TextBox();
             this.lvNganhHang = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,6 +47,7 @@
             this.tbtenNganhHang.Name = "tbtenNganhHang";
             this.tbtenNganhHang.Size = new System.Drawing.Size(157, 20);
             this.tbtenNganhHang.TabIndex = 4;
+            this.tbtenNganhHang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbtenNganhHang_KeyPress);
             // 
             // lvNganhHang
             // 

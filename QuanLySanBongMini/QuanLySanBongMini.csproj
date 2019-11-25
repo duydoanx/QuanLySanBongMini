@@ -64,44 +64,81 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\MatHangBUS.cs" />
     <Compile Include="BUS\NganhHangBUS.cs" />
+    <Compile Include="BUS\PhieuDatSanBongBUS.cs" />
+    <Compile Include="BUS\PhieuNhapHangBUS.cs" />
     <Compile Include="BUS\SanBongBUS.cs" />
     <Compile Include="BUS\UserBUS.cs" />
+    <Compile Include="DAO\ChiTietHoaDonDAO.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
+    <Compile Include="DAO\MatHangDAO.cs" />
     <Compile Include="DAO\NganhHangDAO.cs" />
+    <Compile Include="DAO\PhieuDatSanBongDAO.cs" />
+    <Compile Include="DTO\ChiTietHoaDon.cs" />
+    <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\PhieuDatSanBong.cs" />
+    <Compile Include="DTO\PhieuNhapHang.cs" />
+    <Compile Include="DAO\PhieuNhapHangDAO.cs" />
     <Compile Include="DAO\SanBongDAO.cs" />
     <Compile Include="DAO\SQLConnection.cs" />
     <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="DTO\MatHang.cs" />
     <Compile Include="DTO\NganhHang.cs" />
     <Compile Include="DTO\SanBong.cs" />
     <Compile Include="DTO\User.cs" />
-    <Compile Include="fLogin.cs">
+    <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fLogin.Designer.cs">
-      <DependentUpon>fLogin.cs</DependentUpon>
+    <Compile Include="FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="fMain.cs">
+    <Compile Include="FMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fMain.Designer.cs">
-      <DependentUpon>fMain.cs</DependentUpon>
+    <Compile Include="FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="fNhapHang.cs">
+    <Compile Include="fNhapMatHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fNhapHang.Designer.cs">
-      <DependentUpon>fNhapHang.cs</DependentUpon>
+    <Compile Include="fNhapMatHang.Designer.cs">
+      <DependentUpon>fNhapMatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FQuanLyMatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FQuanLyMatHang.Designer.cs">
+      <DependentUpon>FQuanLyMatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQuanLyNganhHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLyNganhHang.Designer.cs">
+      <DependentUpon>fQuanLyNganhHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="fLogin.resx">
-      <DependentUpon>fLogin.cs</DependentUpon>
+    <Compile Include="SecondaryForm\FNhapGiaMatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecondaryForm\FNhapGiaMatHang.Designer.cs">
+      <DependentUpon>FNhapGiaMatHang.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fMain.resx">
-      <DependentUpon>fMain.cs</DependentUpon>
+    <EmbeddedResource Include="FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fNhapHang.resx">
-      <DependentUpon>fNhapHang.cs</DependentUpon>
+    <EmbeddedResource Include="fNhapMatHang.resx">
+      <DependentUpon>fNhapMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FQuanLyMatHang.resx">
+      <DependentUpon>FQuanLyMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLyNganhHang.resx">
+      <DependentUpon>fQuanLyNganhHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -113,6 +150,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SecondaryForm\FNhapGiaMatHang.resx">
+      <DependentUpon>FNhapGiaMatHang.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -140,6 +180,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_football2.ico" />
+    <None Include="Resources\update_left_rotation_25px.png" />
+    <None Include="Resources\statistic_document_25px.png" />
+    <None Include="Resources\cheap_2_25px.png" />
     <None Include="Resources\delete_sign_30px.png" />
     <None Include="Resources\delete_sign_25px.png" />
     <None Include="Resources\plus_25px.png" />

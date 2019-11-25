@@ -12,9 +12,9 @@ using DTO;
 
 namespace QuanLySanBongMini
 {
-    public partial class fLogin : Form
+    public partial class FLogin : Form
     {
-        public fLogin()
+        public FLogin()
         {
             InitializeComponent();
         }
@@ -32,7 +32,7 @@ namespace QuanLySanBongMini
             if (UserBUS.isExist(username, password))
             {
                 User user = UserBUS.getUser(username, password);
-                fMain formMain = new fMain(user.isAdmin);
+                FMain formMain = new FMain(user.isAdmin);
                 this.Hide();
                 formMain.ShowDialog();
                 this.Show();

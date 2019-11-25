@@ -73,6 +73,16 @@ namespace QuanLySanBongMini.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cheap_2_25px {
+            get {
+                object obj = ResourceManager.GetObject("cheap_2_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_2_34px {
             get {
                 object obj = ResourceManager.GetObject("delete_2_34px", resourceCulture);
@@ -316,6 +326,26 @@ namespace QuanLySanBongMini.Properties {
         internal static System.Drawing.Bitmap refresh_34px {
             get {
                 object obj = ResourceManager.GetObject("refresh_34px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap statistic_document_25px {
+            get {
+                object obj = ResourceManager.GetObject("statistic_document_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap update_left_rotation_25px {
+            get {
+                object obj = ResourceManager.GetObject("update_left_rotation_25px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

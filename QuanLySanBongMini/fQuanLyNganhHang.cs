@@ -13,15 +13,15 @@ using System.Windows.Forms;
 
 namespace QuanLySanBongMini
 {
-    public partial class fNhapHang : Form
+    public partial class FQuanLyNganhHang : Form
     {
         private ArrayList nganhHangList = new ArrayList();
-        public fNhapHang()
+        public FQuanLyNganhHang()
         {
             InitializeComponent();
         }
 
-        private void updateListView()
+        private void updateListViewSan()
         {
             ArrayList dataList = NganhHangBUS.getAllNganhHang();
             lvNganhHang.Clear();
@@ -38,7 +38,7 @@ namespace QuanLySanBongMini
 
         private void fNhapHang_Load(object sender, EventArgs e)
         {
-            updateListView();
+            updateListViewSan();
         }
 
         private void btThemNganhHang_Click(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace QuanLySanBongMini
                 else
                 {
                     tbtenNganhHang.Text = "";
-                    updateListView();
+                    updateListViewSan();
                    
                 }
             }
@@ -86,7 +86,7 @@ namespace QuanLySanBongMini
             {
                 if (NganhHangBUS.updateTenNganhHang(id, tbtenNganhHang.Text))
                 {
-                    updateListView();
+                    updateListViewSan();
                     
                 }
                 else
@@ -133,11 +133,19 @@ namespace QuanLySanBongMini
                 }
                 else
                 {
-                    updateListView();
+                    updateListViewSan();
                     tbtenNganhHang.Text = "";                   
                     btSuaNganhHang.Enabled = false;
                     btSuaNganhHang.Enabled = false;
                 }
+            }
+        }
+
+        private void tbtenNganhHang_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar.Equals(Convert.ToChar(13)))
+            {
+                btThemNganhHang_Click(sender, e);
             }
         }
     }

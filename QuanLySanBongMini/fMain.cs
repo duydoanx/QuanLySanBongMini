@@ -13,18 +13,20 @@ using QuanLySanBongMini.BUS;
  
 namespace QuanLySanBongMini
 {
-    public partial class fMain : Form
+    public partial class FMain : Form
     {
         private bool isAdmin;
-        private ArrayList sanBongList = new ArrayList();       
+        private ArrayList sanBongList = new ArrayList();
+        private ArrayList nganhHangList = new ArrayList();
+        private ArrayList matHangList = new ArrayList();
 
-        public fMain(bool isAdmin)
+        public FMain(bool isAdmin)
         {
             InitializeComponent();
             this.isAdmin = isAdmin;
             if (!isAdmin)
             {
-                menu.Items.Remove(adminItem);
+                //menu.Items.Remove(adminItem);
             }
         }        
 
@@ -40,7 +42,7 @@ namespace QuanLySanBongMini
                 else
                 {
                     tbTenSan.Text = "";
-                    updateListView();
+                    updateListViewSan();
                     statusBarAddText("Đã thêm sân thành công!");
                 }
             }
@@ -51,7 +53,7 @@ namespace QuanLySanBongMini
             }
         }
 
-        private void updateListView()
+        private void updateListViewSan()
         {
             ArrayList dataList = SanBongBUS.getAllSan();
             lvSanBong.Clear();
@@ -60,7 +62,14 @@ namespace QuanLySanBongMini
             foreach(SanBong sanBong in dataList)
             {
                 sanBongList.Add(sanBong);
-                lvSanBong.Items.Add(sanBong.tenSan, 0);                
+                if (sanBong.dangThue)
+                {
+                    lvSanBong.Items.Add(sanBong.tenSan, 1);
+                }
+                else
+                {
+                    lvSanBong.Items.Add(sanBong.tenSan, 0);
+                }
             }
             btSuaSan.Enabled = false;
             btXoaSan.Enabled = false;
@@ -69,7 +78,9 @@ namespace QuanLySanBongMini
         private void fMain_Load(object sender, EventArgs e)
         {
             lvSanBong.Sorting = SortOrder.None;
-            updateListView();            
+            updateListViewSan();
+            updateComboBoxNganhHang();
+            
         }        
 
         private void tbTenSan_KeyPress(object sender, KeyPressEventArgs e)
@@ -111,7 +122,7 @@ namespace QuanLySanBongMini
                 }
                 else
                 {
-                    updateListView();
+                    updateListViewSan();
                     tbTenSan.Text = "";
                     statusBarAddText("Đã xóa sân thành công!");
                     btSuaSan.Enabled = false;
@@ -154,7 +165,7 @@ namespace QuanLySanBongMini
             {
                 if (SanBongBUS.updateTenSan(id, tbTenSan.Text))
                 {
-                    updateListView();
+                    updateListViewSan();
                     statusBarAddText("Đã sửa tên sân thành công!");
                 }
                 else
@@ -172,10 +183,112 @@ namespace QuanLySanBongMini
             }
         }
 
+        void updateComboBoxNganhHang()
+        {
+            ArrayList dataList = NganhHangBUS.getAllNganhHang();
+            cbNhom.Items.Clear();
+            nganhHangList.Clear();
+
+            foreach (NganhHang nganhHang in dataList)
+            {
+                nganhHangList.Add(nganhHang);
+                cbNhom.Items.Add(nganhHang.tenNganhHang);
+            }
+            if (cbNhom.Items.Count > 0) {
+                cbNhom.SelectedItem = cbNhom.Items[0];
+                loadMatHang(((NganhHang)nganhHangList[0]).id);
+            }
+
+        }
+
         private void btThemNganhHang_Click(object sender, EventArgs e)
         {
-            fNhapHang nhapHang = new fNhapHang();
+            FQuanLyNganhHang nhapHang = new FQuanLyNganhHang();
             nhapHang.ShowDialog();
+            updateComboBoxNganhHang();
+        }
+
+        void loadMatHang(int idNganhHang)
+        {
+            ArrayList dataList = MatHangBUS.getAllMatHangFromNganhHang(idNganhHang);
+            lvMatHang.Items.Clear();
+            matHangList.Clear();            
+
+            foreach (MatHang matHang in dataList)
+            {
+                matHangList.Add(matHang);
+                string[] row = { matHang.tenMatHang, matHang.soLuong.ToString(), matHang.donGia.ToString() };
+                ListViewItem viewItem = new ListViewItem(row);
+                lvMatHang.Items.Add(viewItem);
+            }
+
+        }
+
+        private void lvMatHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvMatHang.SelectedItems.Count > 0)
+            {
+                tbMatHangTinhTien.Text = lvMatHang.SelectedItems[0].Text;
+                nudSoLuongTinhTien.Maximum = ((MatHang)matHangList[lvMatHang.SelectedIndices[0]]).soLuong;
+                if(nudSoLuongTinhTien.Maximum > 0)
+                {
+                    nudSoLuongTinhTien.Value = 1;
+                }
+                tbDonGiaTinhTien.Text = ((MatHang)matHangList[lvMatHang.SelectedIndices[0]]).donGia.ToString();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void cbNhom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadMatHang(((NganhHang)nganhHangList[cbNhom.SelectedIndex]).id);
+        }
+
+        private void nudSoLuongTinhTien_ValueChanged(object sender, EventArgs e)
+        {
+            if (nudSoLuongTinhTien.Value > nudSoLuongTinhTien.Maximum)
+            {
+                MessageBox.Show("Vượt quá số lượng", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                nudSoLuongTinhTien.Value = nudSoLuongTinhTien.Maximum;
+                
+            }
+        }
+
+        private void nudSoLuongTinhTien_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (nudSoLuongTinhTien.Value > nudSoLuongTinhTien.Maximum)
+            {
+                MessageBox.Show("Vượt quá số lượng", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                nudSoLuongTinhTien.Value = nudSoLuongTinhTien.Maximum;
+
+            }
+        }
+
+        private void xuấtHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nhậpHàngToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            fNhapMatHang nhapMatHang = new fNhapMatHang();
+            nhapMatHang.ShowDialog();
+            loadMatHang(((NganhHang)nganhHangList[cbNhom.SelectedIndex]).id);
+        }
+
+        private void btQuanLyMatHang_Click(object sender, EventArgs e)
+        {
+            FQuanLyMatHang fQuanLyMatHang = new FQuanLyMatHang();
+            fQuanLyMatHang.ShowDialog();
+            loadMatHang(((NganhHang)nganhHangList[cbNhom.SelectedIndex]).id);
+        }
+
+        private void btThemHang_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

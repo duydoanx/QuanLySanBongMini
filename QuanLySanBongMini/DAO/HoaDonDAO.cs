@@ -71,6 +71,34 @@ namespace QuanLySanBongMini.DAO
             }
             return dataSet;
         }
+        public static DataSet getHoaDon(int id)
+        {
+            DataSet dataSet;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
+                {
+                    conn.Open();
+
+                    String query = "select * from HoaDon where id = @id";
+                    SqlCommand sqlCommand = new SqlCommand(query, conn);
+                    sqlCommand.Parameters.AddWithValue("@id", id);
+
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+
+                    dataSet = new DataSet();
+
+                    sqlDataAdapter.Fill(dataSet);
+
+                    conn.Close();
+                }
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return dataSet;
+        }
         public static void deleteHoaDon(int id)
         {
             try
@@ -93,6 +121,32 @@ namespace QuanLySanBongMini.DAO
             {
                 throw e;
             }
+        }
+        public static DataSet getLastHoaDon()
+        {
+            DataSet dataSet;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
+                {
+                    conn.Open();
+
+                    String query = "SELECT TOP 1 * FROM HoaDon ORDER BY ID DESC";                    
+
+                    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, conn);
+
+                    dataSet = new DataSet();
+
+                    sqlDataAdapter.Fill(dataSet);
+
+                    conn.Close();
+                }
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return dataSet;
         }
     }
 }

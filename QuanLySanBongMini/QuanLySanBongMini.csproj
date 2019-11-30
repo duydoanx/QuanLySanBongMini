@@ -64,6 +64,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\ChiTietHoaDonBUS.cs" />
+    <Compile Include="BUS\HoaDonBUS.cs" />
     <Compile Include="BUS\MatHangBUS.cs" />
     <Compile Include="BUS\NganhHangBUS.cs" />
     <Compile Include="BUS\PhieuDatSanBongBUS.cs" />
@@ -119,6 +121,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SecondaryForm\FDoiSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecondaryForm\FDoiSan.Designer.cs">
+      <DependentUpon>FDoiSan.cs</DependentUpon>
+    </Compile>
     <Compile Include="SecondaryForm\FNhapGiaMatHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,13 +156,10 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="SecondaryForm\FDoiSan.resx">
+      <DependentUpon>FDoiSan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SecondaryForm\FNhapGiaMatHang.resx">
       <DependentUpon>FNhapGiaMatHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,43 +180,19 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\login_rounded_right_100px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\login_rounded_right_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\login_rounded_right_64px1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="icons8_football2.ico" />
+    <None Include="Resources\available_updates_34px.png" />
+    <None Include="Resources\reset_25px.png" />
     <None Include="Resources\update_left_rotation_25px.png" />
+    <None Include="Resources\add_file_25px.png" />
     <None Include="Resources\statistic_document_25px.png" />
-    <None Include="Resources\cheap_2_25px.png" />
-    <None Include="Resources\delete_sign_30px.png" />
-    <None Include="Resources\delete_sign_25px.png" />
+    <None Include="Resources\delete_25px.png" />
     <None Include="Resources\plus_25px.png" />
-    <None Include="Resources\plus_27px.png" />
-    <None Include="Resources\plus_28px.png" />
-    <None Include="Resources\plus_30px.png" />
-    <None Include="Resources\plus_34px.png" />
-    <None Include="Resources\plus_2_math_34px3.png" />
-    <None Include="Resources\pencil_tip_34px1.png" />
+    <None Include="Resources\cheap_2_25px.png" />
     <None Include="Resources\pencil_tip_34px.png" />
-    <None Include="Resources\refresh_16px.png" />
-    <None Include="Resources\refresh_34px.png" />
-    <None Include="Resources\delete_sign_34px.png" />
-    <None Include="Resources\delete_2_34px.png" />
-    <None Include="Resources\plus_2_math_34px2.png" />
-    <None Include="Resources\plus_math_34px.png" />
-    <None Include="Resources\add_34px.png" />
-    <Content Include="Resources\attention_64px.png" />
-    <None Include="Resources\plus_2_math_34px1.png" />
-    <None Include="Resources\plus_2_math_34px.png" />
-    <None Include="Resources\password_64px.png" />
     <None Include="Resources\delete_sign_64px.png" />
     <None Include="Resources\forward_64px.png" />
-    <None Include="Resources\import_48px.png" />
+    <None Include="Resources\password_64px.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

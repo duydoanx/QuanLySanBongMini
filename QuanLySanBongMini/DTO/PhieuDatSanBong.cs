@@ -16,13 +16,15 @@ namespace QuanLySanBongMini.DTO
             this.soGioDat = soGioDat;
             this.donGia = donGia;
             this.idHoaDon = idHoaDon;
+          
         }
 
         public int id { get;}
-        public int idSanBong { get; }
+        public int idSanBong { get; set; }
         public DateTime thoiGianBatDau { get; set; }
         public int soGioDat { get; set; }
         public Double donGia { get; set; }
         public int idHoaDon { get; set; }
+        
     }
 }

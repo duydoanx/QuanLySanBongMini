@@ -64,7 +64,7 @@ namespace QuanLySanBongMini.DAO
             return dataSet;
         }
 
-        public static void updateMatHang(int id, string tenMatHang, int idNganhHang, float donGia)
+        public static void updateMatHang(int id, string tenMatHang, int idNganhHang, float donGia, int soLuong)
         {
             try
             {
@@ -73,13 +73,14 @@ namespace QuanLySanBongMini.DAO
                     conn.Open();
 
                     String query = "update MatHang set tenMatHang = @tenMatHang, idNganhHang = @idNganhHang" +
-                        ", donGia = @donGia where id = @id";
+                        ", donGia = @donGia, soLuong = @soLuong where id = @id";
                     SqlCommand command = new SqlCommand(query, conn);
 
                     command.Parameters.AddWithValue("@tenMatHang", tenMatHang);
                     command.Parameters.AddWithValue("@id", id);
                     command.Parameters.AddWithValue("@idNganhHang", idNganhHang);
                     command.Parameters.AddWithValue("@donGia", donGia);
+                    command.Parameters.AddWithValue("@soLuong", soLuong);
 
                     command.ExecuteNonQuery();
 

@@ -14,13 +14,13 @@ namespace QuanLySanBongMini.BUS
 {
     public class SanBongBUS
     {
-        public static bool addSan(String tenSan)
+        public static bool addSan(String tenSan, double donGia)
         {
             bool kt = true;
 
             try
             {
-                DAO.SanBongDAO.addSan(tenSan);
+                DAO.SanBongDAO.addSan(tenSan, donGia);
             }
             catch(SqlException e)
             {
@@ -45,6 +45,7 @@ namespace QuanLySanBongMini.BUS
                 {
                     String tenSan = row["tenSan"].ToString();
                     int idSan = Convert.ToInt32(row["id"]);
+                    double donGia = Convert.ToInt32(row["donGia"]);
                     dangThue = false;
 
                     phieuDatSanBongList = PhieuDatSanBongBUS.getAllPhieuDatSanBong(idSan);
@@ -52,15 +53,10 @@ namespace QuanLySanBongMini.BUS
                     {
                         thoiGianBatDau = phieuDatSan.thoiGianBatDau;
                         
-                        thoiGianKetThuc = thoiGianBatDau.AddHours((double)phieuDatSan.soGioDat);
-                        
+                        thoiGianKetThuc = thoiGianBatDau.AddHours((double)phieuDatSan.soGioDat);                        
 
                         soSanhKetThuc = DateTime.Compare(thoiGianKetThuc, now);
-                        soSanhBatDau = DateTime.Compare(thoiGianBatDau, now);
-                        Debug.WriteLine(soSanhBatDau);
-                        Debug.WriteLine(soSanhKetThuc);
-                        Debug.WriteLine(thoiGianBatDau);
-                        Debug.WriteLine(thoiGianKetThuc);                       
+                        soSanhBatDau = DateTime.Compare(thoiGianBatDau, now);                                             
 
                         if(soSanhBatDau<0 && soSanhKetThuc > 0)
                         {
@@ -68,7 +64,7 @@ namespace QuanLySanBongMini.BUS
                             break;
                         }
                     }                    
-                    SanBong sanBong = new SanBong(idSan, tenSan, dangThue);                  
+                    SanBong sanBong = new SanBong(idSan, tenSan, dangThue, donGia);                  
                    
                     dataList.Insert(0, sanBong);
                     
@@ -82,12 +78,12 @@ namespace QuanLySanBongMini.BUS
             return dataList;
         }
 
-        public static bool deleteSan(String sanBong)
+        public static bool deleteSan(int id)
         {
             bool kt = true;
             try
             {
-                SanBongDAO.deleteSan(sanBong);
+                SanBongDAO.deleteSan(id);
             }
             catch (SqlException e)
             {
@@ -96,12 +92,12 @@ namespace QuanLySanBongMini.BUS
             return kt;
         }
 
-        public static bool updateTenSan(int id, String tenSan)
+        public static bool updateTenSan(int id, String tenSan, double donGia)
         {
             bool kt = true;
             try
             {
-                SanBongDAO.updateTenSan(id, tenSan);
+                SanBongDAO.updateTenSan(id, tenSan, donGia);
             }
             catch (SqlException e)
             {

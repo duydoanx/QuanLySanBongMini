@@ -60,7 +60,7 @@ namespace QuanLySanBongMini.BUS
             bool kt = true;
             try
             {                
-                MatHangDAO.updateMatHang(matHang.id, matHang.tenMatHang, matHang.idNganhHang, matHang.donGia);
+                MatHangDAO.updateMatHang(matHang.id, matHang.tenMatHang, matHang.idNganhHang, matHang.donGia, matHang.soLuong);
             }
             catch (SqlException e)
             {

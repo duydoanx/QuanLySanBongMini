@@ -48,6 +48,7 @@ namespace QuanLySanBongMini.SecondaryForm
             PhieuDatSanBong phieuDatSanBong = PhieuDatSanBongBUS.getLatestPhieuDatSanBong(sanBong.id);
             SanBong sanBongDoi = (SanBong)sanBongList[lvSanBong.SelectedIndices[0]];
             phieuDatSanBong.idSanBong = sanBongDoi.id;
+            
 
             if (!PhieuDatSanBongBUS.updatePhieuDatSanBong(phieuDatSanBong))
             {

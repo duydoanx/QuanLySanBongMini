@@ -118,7 +118,26 @@ namespace QuanLySanBongMini
                     loadLvChiTietHoaDon(phieuDatSanBong.idHoaDon);
                     btDoiSan.Enabled = true;
                     btCapNhat.Enabled = true;
+                    btHuySan.Enabled = true;
+                    HoaDon hoaDon = HoaDonBUS.getHoaDon(phieuDatSanBong.idHoaDon);
+                    if (hoaDon.daThanhToan)
+                    {
+                        btThuTien.Enabled = false;
 
+                        btDoiSan.Enabled = false;
+                        btCapNhat.Enabled = false;
+                        gbMatHangTinhTien.Enabled = false;
+
+                        lbThanhToan.Text = "ĐÃ THANH TOÁN";
+                    }
+                    else
+                    {
+                        btThuTien.Enabled = true;
+                        lbThanhToan.Text = "CHƯA THANH TOÁN";
+                        btDoiSan.Enabled = true;
+                        btCapNhat.Enabled = true;
+                        gbMatHangTinhTien.Enabled = true;
+                    }
                 }
                 else
                 {
@@ -126,6 +145,11 @@ namespace QuanLySanBongMini
                     matHangChoList.Clear();
                     btDoiSan.Enabled = false;
                     btCapNhat.Enabled = false;
+                    btHuySan.Enabled = false;
+                    btThuTien.Enabled = false;
+                    
+                    
+                    gbMatHangTinhTien.Enabled = true;
                 }
                 tbTenSanTT.Text = sanBong.tenSan;
                 
@@ -148,7 +172,7 @@ namespace QuanLySanBongMini
                 lvChiTietHoaDon.Items.Clear();
                 nudDonGia.Value = 0;
                 btDoiSan.Enabled = false;
-
+                lbThanhToan.Text = "CHƯA THANH TOÁN";
             }
             loadTinhTien();
         }
@@ -300,6 +324,7 @@ namespace QuanLySanBongMini
                 }
                 tbDonGiaTinhTien.Text = ((MatHang)matHangList[lvMatHang.SelectedIndices[0]]).donGia.ToString();
                 loadTinhTien();
+                
                 btThemHang.Enabled = true;
             }
             else
@@ -441,6 +466,7 @@ namespace QuanLySanBongMini
                         matHang.donGia));
                 }
            }
+            btDatSan.Enabled = false;
         }
 
         private void lvChiTietHoaDon_SelectedIndexChanged(object sender, EventArgs e)
@@ -518,15 +544,17 @@ namespace QuanLySanBongMini
         }
 
         int kiemTraChiTietHoaDon(int idMatHang)
-        {           
+        {
+            
             for(int i = 0; i<chiTietHoaDonList.Count; i++)
             {
-                if (((ChiTietHoaDon)chiTietHoaDonList[i]).id == idMatHang)
+                if (((ChiTietHoaDon)chiTietHoaDonList[i]).idMatHang == idMatHang)
                 {
+                    
                     return i;
                 }
             }
-
+            
             return -1;
         }
 
@@ -535,17 +563,58 @@ namespace QuanLySanBongMini
             SanBong sanBong = (SanBong)sanBongList[lvSanBong.SelectedIndices[0]];
             PhieuDatSanBong phieuDatSanBong = PhieuDatSanBongBUS.getLatestPhieuDatSanBong(sanBong.id);
             HoaDon hoaDon = HoaDonBUS.getHoaDon(phieuDatSanBong.idHoaDon);
+            int pos;
             foreach(MatHang matHang in matHangChoList)
             {
-                if(kiemTraChiTietHoaDon(matHang.id) == -1)
+                pos = kiemTraChiTietHoaDon(matHang.id);
+                if ( pos == -1)
                 {
                     ChiTietHoaDonBUS.addChiTietHoaDon(new ChiTietHoaDon(0, hoaDon.id, matHang.id, matHang.soLuong, matHang.donGia));
                 }
                 else
                 {
-                    ChiTietHoaDonBUS.
+                    ((ChiTietHoaDon)chiTietHoaDonList[pos]).soLuong = matHang.soLuong;
+                    ChiTietHoaDonBUS.updateChiTietHoaDon((ChiTietHoaDon)chiTietHoaDonList[pos]);
                 }
             }
+            hoaDon.tenKhachHang = tbTenKhachHang.Text;
+            HoaDonBUS.updateHoaDon(hoaDon);
+            phieuDatSanBong.thoiGianBatDau = dtpGioVao.Value;
+            phieuDatSanBong.soGioDat = (int)nudSoGio.Value;
+
+            PhieuDatSanBongBUS.updatePhieuDatSanBong(phieuDatSanBong);
+        }
+
+        private void btHuySan_Click(object sender, EventArgs e)
+        {
+            SanBong sanBong = (SanBong)sanBongList[lvSanBong.SelectedIndices[0]];
+            PhieuDatSanBong phieuDatSanBong = PhieuDatSanBongBUS.getLatestPhieuDatSanBong(sanBong.id);
+            if (HoaDonBUS.deleteHoaDon(phieuDatSanBong.idHoaDon))
+            {
+                statusBarAddText("Hủy sân thành công");
+                updateListViewSan();
+            }
+            else
+            {
+                MessageBox.Show("Không thể hủy sân!" + lvSanBong.SelectedItems[0].Text, "Lỗi khi hủy sân",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                statusBarAddText("Lỗi khi hủy sân!");
+            }
+        }
+
+        private void btThuTien_Click(object sender, EventArgs e)
+        {
+            SanBong sanBong = (SanBong)sanBongList[lvSanBong.SelectedIndices[0]];
+            PhieuDatSanBong phieuDatSanBong = PhieuDatSanBongBUS.getLatestPhieuDatSanBong(sanBong.id);
+            HoaDon hoaDon = HoaDonBUS.getHoaDon(phieuDatSanBong.idHoaDon);
+            hoaDon.daThanhToan = true;
+            HoaDonBUS.updateHoaDon(hoaDon);
+            btThuTien.Enabled = false;
+        }
+
+        private void btBanLe_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

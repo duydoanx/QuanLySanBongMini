@@ -148,5 +148,40 @@ namespace QuanLySanBongMini.DAO
             }
             return dataSet;
         }
+
+        public static void updateHoaDon(int id, string tenKhachHang, bool daThanhToan)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
+                {
+                    conn.Open();
+
+                    String query = "update HoaDon set tenKhachHang = @tenKhachHang, daThanhToan = @daThanhToan where id = @id";
+                    SqlCommand command = new SqlCommand(query, conn);
+
+                    command.Parameters.AddWithValue("@id", id);
+                    command.Parameters.AddWithValue("@tenKhachHang", tenKhachHang);
+                    
+                    if (daThanhToan)
+                    {
+                        command.Parameters.AddWithValue("@daThanhToan", 1);
+                    }
+                    else
+                    {
+                        command.Parameters.AddWithValue("@daThanhToan", 0);
+                    }
+
+                    command.ExecuteNonQuery();
+
+                    conn.Close();
+                }
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+
+        }
     }
 }

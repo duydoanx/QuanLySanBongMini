@@ -92,5 +92,19 @@ namespace QuanLySanBongMini.BUS
             }
             return kt;
         }
+        public static bool updateChiTietHoaDon(ChiTietHoaDon chiTietHoaDon)
+        {
+            bool kt = true;
+            try
+            {
+                ChiTietHoaDonDAO.updateChiTietHoaDon(chiTietHoaDon.id, chiTietHoaDon.idHoaDon, chiTietHoaDon.idMatHang,
+                    chiTietHoaDon.soLuong, chiTietHoaDon.donGia);
+            }
+            catch (SqlException e)
+            {
+                kt = false;
+            }
+            return kt;
+        }
     }
 }

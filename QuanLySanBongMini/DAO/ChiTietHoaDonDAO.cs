@@ -132,7 +132,7 @@ namespace QuanLySanBongMini.DAO
                     command.Parameters.AddWithValue("@idHoaDon", idHoaDon);
                     command.Parameters.AddWithValue("@idMatHang", idMatHang);
                     command.Parameters.AddWithValue("@soLuong", soLuong);
-                    command.Parameters.AddWithValue("@sonGia", donGia);                    
+                    command.Parameters.AddWithValue("@donGia", donGia);                    
 
                     command.ExecuteNonQuery();
 

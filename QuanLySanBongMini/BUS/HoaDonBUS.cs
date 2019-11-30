@@ -109,5 +109,18 @@ namespace QuanLySanBongMini.BUS
             }
             return hoaDon;
         }
+        public static bool updateHoaDon(HoaDon hoaDon)
+        {
+            bool kt = true;
+            try
+            {
+                HoaDonDAO.updateHoaDon(hoaDon.id, hoaDon.tenKhachHang, hoaDon.daThanhToan);
+            }
+            catch (SqlException e)
+            {
+                kt = false;
+            }
+            return kt;
+        }
     }
 }

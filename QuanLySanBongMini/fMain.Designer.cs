@@ -70,7 +70,7 @@
             this.tbTienHang = new System.Windows.Forms.TextBox();
             this.tbTienSan = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbMatHangTinhTien = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tbDonGiaTinhTien = new System.Windows.Forms.TextBox();
             this.tbMatHangTinhTien = new System.Windows.Forms.TextBox();
@@ -97,7 +97,7 @@
             this.btSuaSan = new System.Windows.Forms.Button();
             this.btXoaSan = new System.Windows.Forms.Button();
             this.btThemSan = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btBanLe = new System.Windows.Forms.Button();
             this.btThemNganhHang = new System.Windows.Forms.Button();
             this.btQuanLyMatHang = new System.Windows.Forms.Button();
             this.btCapNhat = new System.Windows.Forms.Button();
@@ -109,6 +109,7 @@
             this.btXoaHang = new System.Windows.Forms.Button();
             this.btThemHang = new System.Windows.Forms.Button();
             this.nhậpHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lbThanhToan = new System.Windows.Forms.Label();
             this.menu.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -121,7 +122,7 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTienKhac)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGiamGia)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.gbMatHangTinhTien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuongTinhTien)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoGio)).BeginInit();
@@ -136,7 +137,7 @@
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menu.Size = new System.Drawing.Size(1516, 30);
+            this.menu.Size = new System.Drawing.Size(1516, 28);
             this.menu.TabIndex = 2;
             this.menu.Text = "menuStrip2";
             // 
@@ -153,7 +154,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Controls.Add(this.btBanLe);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.btThemNganhHang);
             this.tabPage2.Controls.Add(this.btQuanLyMatHang);
@@ -361,6 +362,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lbThanhToan);
             this.tabPage1.Controls.Add(this.btCapNhat);
             this.tabPage1.Controls.Add(this.btDatSan);
             this.tabPage1.Controls.Add(this.btHuySan);
@@ -374,7 +376,7 @@
             this.tabPage1.Controls.Add(this.label19);
             this.tabPage1.Controls.Add(this.tbThanhToan);
             this.tabPage1.Controls.Add(this.groupBox3);
-            this.tabPage1.Controls.Add(this.groupBox2);
+            this.tabPage1.Controls.Add(this.gbMatHangTinhTien);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
@@ -579,25 +581,25 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Tiền sân";
             // 
-            // groupBox2
+            // gbMatHangTinhTien
             // 
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.tbDonGiaTinhTien);
-            this.groupBox2.Controls.Add(this.tbMatHangTinhTien);
-            this.groupBox2.Controls.Add(this.btXoaHang);
-            this.groupBox2.Controls.Add(this.btThemHang);
-            this.groupBox2.Controls.Add(this.lvChiTietHoaDon);
-            this.groupBox2.Controls.Add(this.nudSoLuongTinhTien);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(8, 6);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(443, 597);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
+            this.gbMatHangTinhTien.Controls.Add(this.label8);
+            this.gbMatHangTinhTien.Controls.Add(this.tbDonGiaTinhTien);
+            this.gbMatHangTinhTien.Controls.Add(this.tbMatHangTinhTien);
+            this.gbMatHangTinhTien.Controls.Add(this.btXoaHang);
+            this.gbMatHangTinhTien.Controls.Add(this.btThemHang);
+            this.gbMatHangTinhTien.Controls.Add(this.lvChiTietHoaDon);
+            this.gbMatHangTinhTien.Controls.Add(this.nudSoLuongTinhTien);
+            this.gbMatHangTinhTien.Controls.Add(this.label6);
+            this.gbMatHangTinhTien.Controls.Add(this.label5);
+            this.gbMatHangTinhTien.Controls.Add(this.label4);
+            this.gbMatHangTinhTien.Location = new System.Drawing.Point(8, 6);
+            this.gbMatHangTinhTien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbMatHangTinhTien.Name = "gbMatHangTinhTien";
+            this.gbMatHangTinhTien.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbMatHangTinhTien.Size = new System.Drawing.Size(443, 597);
+            this.gbMatHangTinhTien.TabIndex = 5;
+            this.gbMatHangTinhTien.TabStop = false;
             // 
             // label8
             // 
@@ -882,20 +884,21 @@
             this.btThemSan.UseVisualStyleBackColor = false;
             this.btThemSan.Click += new System.EventHandler(this.btThemSan_Click);
             // 
-            // button4
+            // btBanLe
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.Image = global::QuanLySanBongMini.Properties.Resources.cheap_2_25px;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(12, 535);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(101, 62);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Bán lẻ";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.button4, "Sửa tên hàng");
-            this.button4.UseVisualStyleBackColor = false;
+            this.btBanLe.BackColor = System.Drawing.Color.Transparent;
+            this.btBanLe.Image = global::QuanLySanBongMini.Properties.Resources.cheap_2_25px;
+            this.btBanLe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btBanLe.Location = new System.Drawing.Point(12, 535);
+            this.btBanLe.Margin = new System.Windows.Forms.Padding(4);
+            this.btBanLe.Name = "btBanLe";
+            this.btBanLe.Size = new System.Drawing.Size(101, 62);
+            this.btBanLe.TabIndex = 3;
+            this.btBanLe.Text = "Bán lẻ";
+            this.btBanLe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTip1.SetToolTip(this.btBanLe, "Sửa tên hàng");
+            this.btBanLe.UseVisualStyleBackColor = false;
+            this.btBanLe.Click += new System.EventHandler(this.btBanLe_Click);
             // 
             // btThemNganhHang
             // 
@@ -957,6 +960,7 @@
             // 
             // btHuySan
             // 
+            this.btHuySan.Enabled = false;
             this.btHuySan.Image = global::QuanLySanBongMini.Properties.Resources.delete_25px;
             this.btHuySan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btHuySan.Location = new System.Drawing.Point(785, 518);
@@ -967,6 +971,7 @@
             this.btHuySan.Text = "Hủy sân";
             this.btHuySan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btHuySan.UseVisualStyleBackColor = true;
+            this.btHuySan.Click += new System.EventHandler(this.btHuySan_Click);
             // 
             // btDoiSan
             // 
@@ -1008,6 +1013,7 @@
             this.btThuTien.Text = "Thu tiền";
             this.btThuTien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btThuTien.UseVisualStyleBackColor = true;
+            this.btThuTien.Click += new System.EventHandler(this.btThuTien_Click);
             // 
             // btXoaHang
             // 
@@ -1046,9 +1052,19 @@
             // 
             this.nhậpHàngToolStripMenuItem.Image = global::QuanLySanBongMini.Properties.Resources.pencil_tip_34px;
             this.nhậpHàngToolStripMenuItem.Name = "nhậpHàngToolStripMenuItem";
-            this.nhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
+            this.nhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
             this.nhậpHàngToolStripMenuItem.Text = "Nhập hàng";
             this.nhậpHàngToolStripMenuItem.Click += new System.EventHandler(this.nhậpHàngToolStripMenuItem_Click_1);
+            // 
+            // lbThanhToan
+            // 
+            this.lbThanhToan.AutoSize = true;
+            this.lbThanhToan.ForeColor = System.Drawing.Color.Red;
+            this.lbThanhToan.Location = new System.Drawing.Point(475, 544);
+            this.lbThanhToan.Name = "lbThanhToan";
+            this.lbThanhToan.Size = new System.Drawing.Size(152, 18);
+            this.lbThanhToan.TabIndex = 42;
+            this.lbThanhToan.Text = "CHƯA THANH TOÁN";
             // 
             // FMain
             // 
@@ -1087,8 +1103,8 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTienKhac)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGiamGia)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbMatHangTinhTien.ResumeLayout(false);
+            this.gbMatHangTinhTien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuongTinhTien)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1127,7 +1143,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ToolStripMenuItem nhậpHàngToolStripMenuItem;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btBanLe;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabTinhTien;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -1139,7 +1155,7 @@
         private System.Windows.Forms.TextBox tbTienHang;
         private System.Windows.Forms.TextBox tbTienSan;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbMatHangTinhTien;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbDonGiaTinhTien;
         private System.Windows.Forms.TextBox tbMatHangTinhTien;
@@ -1180,5 +1196,6 @@
         private System.Windows.Forms.NumericUpDown nudDonGia;
         private System.Windows.Forms.Button btCapNhat;
         private System.Windows.Forms.Button btDatSan;
+        private System.Windows.Forms.Label lbThanhToan;
     }
 }

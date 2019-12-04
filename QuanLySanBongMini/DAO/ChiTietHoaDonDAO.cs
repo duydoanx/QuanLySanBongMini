@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QuanLySanBongMini.DAO
 {
-    class ChiTietHoaDonDAO
+    public class ChiTietHoaDonDAO
     {
         public static void addChiTietHoaDon(int idHoaDon, int idMatHang, int soLuong, double donGia)
         {
@@ -100,7 +100,7 @@ namespace QuanLySanBongMini.DAO
                 {
                     conn.Open();
 
-                    String query = "delete from ChiTieHoaDon where id = @id";
+                    String query = "delete from ChiTietHoaDon where id = @id";
                     SqlCommand command = new SqlCommand(query, conn);
 
                     command.Parameters.AddWithValue("@id", id);
@@ -114,6 +114,36 @@ namespace QuanLySanBongMini.DAO
             {
                 throw e;
             }
+        }
+
+        public static void updateChiTietHoaDon(int id, int idHoaDon, int idMatHang, int soLuong, double donGia)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
+                {
+                    conn.Open();
+
+                    String query = "update ChiTietHoaDon set idHoaDon = @idHoaDon, idMatHang = @idMatHang, " +
+                        "soLuong = @soLuong, donGia = @donGia where id = @id";
+                    SqlCommand command = new SqlCommand(query, conn);
+
+                    command.Parameters.AddWithValue("@id", id);
+                    command.Parameters.AddWithValue("@idHoaDon", idHoaDon);
+                    command.Parameters.AddWithValue("@idMatHang", idMatHang);
+                    command.Parameters.AddWithValue("@soLuong", soLuong);
+                    command.Parameters.AddWithValue("@donGia", donGia);                    
+
+                    command.ExecuteNonQuery();
+
+                    conn.Close();
+                }
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+
         }
     }
 }

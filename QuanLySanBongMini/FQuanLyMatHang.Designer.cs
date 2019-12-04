@@ -117,7 +117,7 @@
             // btThemMatHang
             // 
             this.btThemMatHang.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThemMatHang.Image = global::QuanLySanBongMini.Properties.Resources.plus_30px;
+            this.btThemMatHang.Image = global::QuanLySanBongMini.Properties.Resources.plus_25px;
             this.btThemMatHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThemMatHang.Location = new System.Drawing.Point(87, 52);
             this.btThemMatHang.Name = "btThemMatHang";
@@ -131,7 +131,7 @@
             // btSuaMatHang
             // 
             this.btSuaMatHang.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSuaMatHang.Image = global::QuanLySanBongMini.Properties.Resources.pencil_tip_34px1;
+            this.btSuaMatHang.Image = global::QuanLySanBongMini.Properties.Resources.pencil_tip_34px;
             this.btSuaMatHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSuaMatHang.Location = new System.Drawing.Point(173, 52);
             this.btSuaMatHang.Name = "btSuaMatHang";
@@ -145,7 +145,7 @@
             // btXoaMatHang
             // 
             this.btXoaMatHang.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoaMatHang.Image = global::QuanLySanBongMini.Properties.Resources.delete_sign_30px;
+            this.btXoaMatHang.Image = global::QuanLySanBongMini.Properties.Resources.delete_25px;
             this.btXoaMatHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btXoaMatHang.Location = new System.Drawing.Point(259, 52);
             this.btXoaMatHang.Name = "btXoaMatHang";

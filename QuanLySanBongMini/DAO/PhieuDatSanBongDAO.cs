@@ -38,35 +38,7 @@ namespace QuanLySanBongMini.DAO
                 conn.Close();
             }
 
-        }
-        public static void addPhieuDatSanBong(int idSanBong, DateTime thoiGianBatDau, int soGioDat, double donGia)
-        {
-            using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
-            {
-                conn.Open();
-
-                String query = "insert into PhieuDatSanBong(idSanBong, thoiGianBatDau, soGioDat, donGia) " +
-                       "values (@idSanBong, @thoiGianBatDau, @soGioDat, @donGia);";
-                SqlCommand command = new SqlCommand(query, conn);
-
-                command.Parameters.AddWithValue("@idSanBong", idSanBong);
-                command.Parameters.AddWithValue("@thoiGianBatDau", thoiGianBatDau);
-                command.Parameters.AddWithValue("@soGioDat", soGioDat);
-                command.Parameters.AddWithValue("@donGia", donGia);                
-
-                try
-                {
-                    command.ExecuteNonQuery();
-                }
-                catch (SqlException e)
-                {
-                    throw e;
-                }
-
-                conn.Close();
-            }
-
-        }
+        }       
         public static DataSet getAllPhieuDatSanBong(int idSanBong)
         {
             DataSet dataSet;
@@ -144,6 +116,37 @@ namespace QuanLySanBongMini.DAO
             {
                 throw e;
             }
+        }
+        public static void updatePhieuDatSanBong(int id, int idSanBong, DateTime thoiGianBatDau, int soGioDat, double donGia,
+            int idHoaDon)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(SQLConnection.connectionString()))
+                {
+                    conn.Open();
+
+                    String query = "update PhieuDatSanBong set idSanBong = @idSanBong, thoiGianBatDau = @thoiGianBatDau, " +
+                        "soGioDat = @soGioDat, donGia = @donGia, idHoaDon = @idHoaDon where id = @id";
+                    SqlCommand command = new SqlCommand(query, conn);
+
+                    command.Parameters.AddWithValue("@id", id);
+                    command.Parameters.AddWithValue("@thoiGianBatDau", thoiGianBatDau);
+                    command.Parameters.AddWithValue("@soGioDat", soGioDat);
+                    command.Parameters.AddWithValue("@donGia", donGia);
+                    command.Parameters.AddWithValue("@idHoaDon", idHoaDon);
+                    command.Parameters.AddWithValue("@idSanBong", idSanBong);
+
+                    command.ExecuteNonQuery();
+
+                    conn.Close();
+                }
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+
         }
     }
 }

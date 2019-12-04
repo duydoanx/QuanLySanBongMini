@@ -39,6 +39,9 @@
             this.cbMatHang = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.nudTongTien = new System.Windows.Forms.NumericUpDown();
+            this.btNhap = new System.Windows.Forms.Button();
+            this.btXoa = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dtpNgayNhap = new System.Windows.Forms.DateTimePicker();
             this.nudSoLuong = new System.Windows.Forms.NumericUpDown();
@@ -51,12 +54,9 @@
             this.soLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tongTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label6 = new System.Windows.Forms.Label();
-            this.nudTongTien = new System.Windows.Forms.NumericUpDown();
-            this.btNhap = new System.Windows.Forms.Button();
-            this.btXoa = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTongTien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // cbNganhHang
@@ -113,6 +113,46 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(457, 131);
             this.panel1.TabIndex = 4;
+            // 
+            // nudTongTien
+            // 
+            this.nudTongTien.Location = new System.Drawing.Point(360, 40);
+            this.nudTongTien.Maximum = new decimal(new int[] {
+            1215752191,
+            23,
+            0,
+            0});
+            this.nudTongTien.Name = "nudTongTien";
+            this.nudTongTien.Size = new System.Drawing.Size(79, 20);
+            this.nudTongTien.TabIndex = 12;
+            // 
+            // btNhap
+            // 
+            this.btNhap.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNhap.Image = global::QuanLySanBongMini.Properties.Resources.plus_25px;
+            this.btNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btNhap.Location = new System.Drawing.Point(291, 76);
+            this.btNhap.Name = "btNhap";
+            this.btNhap.Size = new System.Drawing.Size(71, 44);
+            this.btNhap.TabIndex = 5;
+            this.btNhap.Text = "Nhập";
+            this.btNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btNhap.UseVisualStyleBackColor = true;
+            this.btNhap.Click += new System.EventHandler(this.btNhap_Click);
+            // 
+            // btXoa
+            // 
+            this.btXoa.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXoa.Image = global::QuanLySanBongMini.Properties.Resources.delete_25px;
+            this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btXoa.Location = new System.Drawing.Point(368, 76);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.Size = new System.Drawing.Size(71, 44);
+            this.btXoa.TabIndex = 11;
+            this.btXoa.Text = "Xóa";
+            this.btXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btXoa.UseVisualStyleBackColor = true;
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
             // 
             // label5
             // 
@@ -174,7 +214,7 @@
             this.lvNhapHang.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
             this.lvNhapHang.Location = new System.Drawing.Point(15, 181);
-            this.lvNhapHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvNhapHang.Margin = new System.Windows.Forms.Padding(2);
             this.lvNhapHang.MultiSelect = false;
             this.lvNhapHang.Name = "lvNhapHang";
             this.lvNhapHang.Size = new System.Drawing.Size(458, 199);
@@ -216,46 +256,6 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Lịch sử nhập";
             // 
-            // nudTongTien
-            // 
-            this.nudTongTien.Location = new System.Drawing.Point(360, 40);
-            this.nudTongTien.Maximum = new decimal(new int[] {
-            1215752191,
-            23,
-            0,
-            0});
-            this.nudTongTien.Name = "nudTongTien";
-            this.nudTongTien.Size = new System.Drawing.Size(79, 20);
-            this.nudTongTien.TabIndex = 12;
-            // 
-            // btNhap
-            // 
-            this.btNhap.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btNhap.Image = global::QuanLySanBongMini.Properties.Resources.plus_30px;
-            this.btNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btNhap.Location = new System.Drawing.Point(291, 76);
-            this.btNhap.Name = "btNhap";
-            this.btNhap.Size = new System.Drawing.Size(71, 44);
-            this.btNhap.TabIndex = 5;
-            this.btNhap.Text = "Nhập";
-            this.btNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btNhap.UseVisualStyleBackColor = true;
-            this.btNhap.Click += new System.EventHandler(this.btNhap_Click);
-            // 
-            // btXoa
-            // 
-            this.btXoa.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoa.Image = global::QuanLySanBongMini.Properties.Resources.delete_sign_30px;
-            this.btXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXoa.Location = new System.Drawing.Point(368, 76);
-            this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(71, 44);
-            this.btXoa.TabIndex = 11;
-            this.btXoa.Text = "Xóa";
-            this.btXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btXoa.UseVisualStyleBackColor = true;
-            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
-            // 
             // fNhapMatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,8 +272,8 @@
             this.Load += new System.EventHandler(this.fNhapMatHang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTongTien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

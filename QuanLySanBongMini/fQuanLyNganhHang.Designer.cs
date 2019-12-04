@@ -80,7 +80,7 @@
             // btSuaNganhHang
             // 
             this.btSuaNganhHang.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSuaNganhHang.Image = global::QuanLySanBongMini.Properties.Resources.pencil_tip_34px1;
+            this.btSuaNganhHang.Image = global::QuanLySanBongMini.Properties.Resources.pencil_tip_34px;
             this.btSuaNganhHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSuaNganhHang.Location = new System.Drawing.Point(212, 57);
             this.btSuaNganhHang.Name = "btSuaNganhHang";
@@ -94,7 +94,7 @@
             // btXoaNganhHang
             // 
             this.btXoaNganhHang.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoaNganhHang.Image = global::QuanLySanBongMini.Properties.Resources.delete_sign_30px;
+            this.btXoaNganhHang.Image = global::QuanLySanBongMini.Properties.Resources.delete_25px;
             this.btXoaNganhHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btXoaNganhHang.Location = new System.Drawing.Point(212, 102);
             this.btXoaNganhHang.Name = "btXoaNganhHang";
@@ -108,7 +108,7 @@
             // btThemNganhHang
             // 
             this.btThemNganhHang.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThemNganhHang.Image = global::QuanLySanBongMini.Properties.Resources.plus_30px;
+            this.btThemNganhHang.Image = global::QuanLySanBongMini.Properties.Resources.plus_25px;
             this.btThemNganhHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btThemNganhHang.Location = new System.Drawing.Point(212, 12);
             this.btThemNganhHang.Name = "btThemNganhHang";
@@ -119,7 +119,7 @@
             this.btThemNganhHang.UseVisualStyleBackColor = true;
             this.btThemNganhHang.Click += new System.EventHandler(this.btThemNganhHang_Click);
             // 
-            // fNhapHang
+            // FQuanLyNganhHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,7 +134,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "fNhapHang";
+            this.Name = "FQuanLyNganhHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Ngành hàng";
             this.Load += new System.EventHandler(this.fNhapHang_Load);
